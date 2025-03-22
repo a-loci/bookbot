@@ -1,2 +1,2 @@
 # bookbot
-Python program that scans strings in a novel and returns information 
+BookBot is my first [Boot.dev](https://www.boot.dev) project!
