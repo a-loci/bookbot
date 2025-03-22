@@ -1,2 +1,2 @@
 # bookbot
-BookBot is my first [Boot.dev](https://www.boot.dev) project!
+BookBot is a Python project that counts words and characters in a given .txt file.
