@@ -19,11 +19,11 @@ def main():
     book_path = sys.argv[1]  # Get path from command line
     frankenstein = get_book_text(book_path)
 
-    #grab_file=get_book_text(frankenstein)
-    #print(f"Printing Mary Shelly's Frankenstein...\n{grab_file}")
+    #read_file=get_book_text(frankenstein)
+    #print(f"Printing Mary Shelly's Frankenstein...\n{read_file}")
 
     organize= count_char(frankenstein)
-    print("============ BOOKBOT ============)")
+    print("============ BOOKBOT ============")
     print(f"Analyzing book found at {book_path}...")
     print("----------- Word Count ----------")
     print(count_text_words(frankenstein))

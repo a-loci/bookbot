@@ -1,24 +1,23 @@
 
 
-def count_text_words(file_path):
-    with open(file_path,"r") as file:
-        splitter= file.read()
-        splt_list=splitter.split()
+def count_text_words(frankenstein):
+        splt_list=frankenstein.split()
 
-    num_words=0
-    for words in splt_list:
-        num_words+=1
-    return f"Found {num_words} total words"
+        num_words=0
+        for words in splt_list:
+            num_words+=1
+        return f"Found {num_words} total words"
 
 
-def count_char(file_path):
-    with open(file_path,"r") as file:
-        txt=file.read().lower()
+def count_char(frankenstein):
+        txt=frankenstein
 
-    counts = {}
-    for char in txt:
-        counts[char] = counts.get(char, 0) + 1
-    return counts
+        counts = {}
+        for char in txt:
+            if char.isalpha():
+                char = char.lower()
+                counts[char] = counts.get(char, 0) + 1
+        return counts
      
 
 
