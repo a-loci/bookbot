@@ -1,3 +1,5 @@
+
+
 def count_text_words(file_path):
     with open(file_path,"r") as file:
         splitter= file.read()
@@ -6,4 +8,25 @@ def count_text_words(file_path):
     num_words=0
     for words in splt_list:
         num_words+=1
-    return f"{num_words} words found in the document"
+    return f"Found {num_words} total words"
+
+
+def count_char(file_path):
+    with open(file_path,"r") as file:
+        txt=file.read().lower()
+
+    counts = {}
+    for char in txt:
+        counts[char] = counts.get(char, 0) + 1
+    return counts
+     
+
+
+def sort_dict(counts):
+    lst_tuples = [(i, j) for i, j in counts.items() if i.isalpha()]
+
+    sorted_list = sorted(lst_tuples, key=lambda item: item[1], reverse=True)
+
+    for char, count in sorted_list:
+        print(f"{char}: {count}")
+

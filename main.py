@@ -1,5 +1,7 @@
 #PY project
-from stats import count_text_words
+from stats import *
+import sys
+
 
 
 def get_book_text(file_path):
@@ -10,11 +12,23 @@ def get_book_text(file_path):
 
 
 def main():
-    frankenstein = "books/frankenstein.txt"
+    if len(sys.argv) < 2:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
+    
+    book_path = sys.argv[1]  # Get path from command line
+    frankenstein = get_book_text(book_path)
+
     #grab_file=get_book_text(frankenstein)
     #print(f"Printing Mary Shelly's Frankenstein...\n{grab_file}")
 
+    organize= count_char(frankenstein)
+    print("============ BOOKBOT ============)")
+    print(f"Analyzing book found at {book_path}...")
+    print("----------- Word Count ----------")
     print(count_text_words(frankenstein))
+    print("--------- Character Count -------")
+    sort_dict(organize)
 
 
 main()
